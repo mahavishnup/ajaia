@@ -82,7 +82,7 @@ export default function DocumentShow({ document: doc, isOwner, shares: initialSh
                 headers: {
                     'Content-Type': 'application/json',
                     Accept: 'application/json',
-                    'X-CSRF-TOKEN': csrfToken,
+                    'X-XSRF-TOKEN': csrfToken,
                     'X-Inertia': 'false',
                 },
                 body: JSON.stringify({
@@ -287,7 +287,7 @@ function ShareModal({
                 headers: {
                     'Content-Type': 'application/json',
                     Accept: 'application/json',
-                    'X-CSRF-TOKEN': csrfToken,
+                    'X-XSRF-TOKEN': csrfToken,
                     'X-Inertia': 'false',
                 },
                 body: JSON.stringify({ email }),
